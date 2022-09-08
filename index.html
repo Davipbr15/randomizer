@@ -7,5 +7,22 @@
 
     <h1>Bem-vindo ao um aleatorizador de numeros de 1 a 24, ou seja, letra do alfabeto, rapidamente feito para adedonhas</h1>
 
+    <h1 id="numero"></h1> 
+
+    <div id="div1">
+        <div id="click-me" onclick="randomLetter()">Generate random letter</div>
+        <p>Our random letter is: <span id="rand"></span></p>
+      </div>
+      
+    <script>
+      
+      function randomLetter() {
+        var letters = 'abcdefghijklmnopqrstuvwxyz';
+        var randomNum = Math.round(Math.random() * 26);
+        var randomLetter = letters.charAt(randomNum);
+        document.getElementById("rand").innerHTML = randomLetter;
+      };
+      
+    </script>
 </body>
 </html>
